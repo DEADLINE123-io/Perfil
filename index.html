@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--Definindo um documento HTML5 -->
+<html lang="pt-br">
+  <!--Definindo a linguagem -->
+  <!--Tags filhas head e body -->
+  <!--Tag head responsável por ajustar configurações do nosso documento que não são visíseis a quem visita a página -->
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <!--configurações para fonte de texto -->
+
+    <meta charset="UTF-8" />
+    <!--Defini quais conjuntos que caracteres podem se usados na página, essa por exemplo permite caractere especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--viewport é a parte visível da página, ele está definindo que o conteudo dentro dele se adapta ao tamanho da tela do dispositivo, a configuração "initial-scale=1.0" define que a pagina começa sem zoom, porém dando cliques na tela pode dar esse zomm -->
+    <title>Project01</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--rel(relacionamento), você está definindo que essa tag de link é um relacionamento com uma tag com um arquivo do tipo stylesheet, então aviso pra tag que o arquivo que eu vou colocar na referência(href) é um tipo stylesheet, 
+      href(local do arquivo)  -->
+  </head>
+  <body>
+    <div id="container">
+      <!--DIV é uma caixa genérica
+      ID é um atributo, faz com que o elemento seja único -->
+      <div id="profile">
+
+        <!--caixa que contem a imagem e texto -->
+        <img src="./assets/avatar.png" alt="Foto de Mayk Brito" />
+        <!--
+          src(localização da imagem)
+          alt(descrição da imagem)
+          -->
+        <p>@maykbrito</p>
+      </div>
+
+       <div id="switch" onclick="ToggleMode()">
+        <!--faz o botão executar funções, ele procura no javascript
+          ToggleMode:uma função-->
+        <button></button>
+        <span></span>
+       </div>
+        
+
+      <ul>
+        <!--
+         <ul>(lista não ordenada)
+          <li>(lista)
+          -->
+
+        <li><a href="#">Increva-se no NLW</a></li>
+        <li><a href="#">Baixe meu e-book</a></li>
+        <li>
+          <a href="https://github.com/DEADLINE123-io" target="_blank"
+            >Veja meu portfólio</a
+          >
+        </li>
+        <li>
+          <a href="https://app.rocketseat.com.br/discover" target="_blank"
+            >Conheça o Discover</a
+          >
+        </li>
+      </ul>
+      <div id="social-links">
+        
+        <a href="https://www.youtube.com/watch?v=6FU72PC22kE" target="_blank">
+        <ion-icon name="logo-github"></ion-icon></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/watch?v=fzMittUWJko&" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon></ion-icon>
+       </a>
+        <a href="https://www.youtube.com/watch?v=v-HekcdZrMM&" target="_blank">
+        <ion-icon name="logo-youtube"></ion-icon></ion-icon>
+        </a>
+       <a href="https://www.youtube.com/watch?v=-2dmaHe1Ijw&" target="_blank">
+        <ion-icon name="logo-linkedin"></ion-icon></ion-icon>
+        </a>
+      </div>
+      <footer>
+        <a href="https://github.com/DEADLINE123-io" target="_blank">Feito com ♥ pela Rocketseat</a>
+      </footer>
+    </div>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="script.js"></script>
+  </body>
+</html>

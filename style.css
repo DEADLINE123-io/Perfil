@@ -1,0 +1,177 @@
+* {
+  /* configuração resetar */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 
+  box-sizing(medida do tamanho da caixa)
+  padding(preenchimento que fica entre a borda e o conteudo */
+}
+
+:root {
+  --text-color: white;
+  /* estou definindo que todo o meu conteudo em todo o lugar da minha página, tudo que eu usar essa variavel vai usar branco no lugar(-text-color é o nome da variavel), root é a raiz da minha página*/
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(255, 255, 255, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(assets/MoonStars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(assets/Sun.svg);
+}
+
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+  /* estou puxando uma imagem para o background da minha página
+    no repeat(para a imagem não repetir)
+    top center(para a imagem começar no topo e ficar centralizada)
+    cover(cobre todo o espaço visível) */
+}
+
+body * {
+  /* (*) é o seletor universal, significa que as configurações serão aplicadas para todos os elementos dentro do body */
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  /* (*) defini a fonte do texto e a cor */
+}
+
+#container {
+  width: 360px;
+  /* largura da caixa DIV */
+  margin: 56px auto 0px;
+  /* centralizou a caixa */
+
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+  /* centralizou a imagem e colocou preenchimento dentro da caixa */
+}
+
+#profile img {
+  width: 112px;
+  /*  largura da imagem */
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  /* configurações do texto, tamanho e altura da linha  */
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+/* Links  */
+ul {
+  list-style: none;
+  /* removi a estilização dessa lista  */
+  display: flex;
+  flex-direction: column;
+  /* faz o conteudo ficar um abaixo do outro  */
+  gap: 16px;
+  /* coloca espaço entre os elementos  */
+
+  padding: 24px 0px;
+}
+
+ul li a {
+  display: flex;
+  /* display flex faz com que os elementos de encaixam dentro de determinada espaço  */
+  justify-content: center;
+  /* ajusta os elementos ao meio(horizontal)  */
+  align-items: center;
+  /* ajusta os elementos ao meio(vertical)  */
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  /* arredondamento de borda  */
+
+  backdrop-filter: blur(4px);
+  /* coloca um blur*embaçado) no elemento  */
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  /* remove decorações do texto como por exemplo underline  */
+  font-weight: 500;
+  /* definiu o tamanho da fonte  */
+
+  transition: background 0.2s;
+}
+
+/* pseudo-selcor */
+/* essas configurações são pra quando passar o mouse em cima do botão */
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
