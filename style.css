@@ -100,8 +100,6 @@ body * {
   outline: 8px solid var(--highlight-color);
 }
 
-
-
 #switch span {
   display: block;
   width: 64px;
@@ -189,8 +187,10 @@ footer {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
 
+
+
   .light {
-    --br-url: url(.assets/bg-desktop-light.jpg);
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 
@@ -208,6 +208,6 @@ footer {
     left: 50%;
   }
   to {
-    left: 0%;
+    left: 0;
   }
 }
