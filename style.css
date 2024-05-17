@@ -35,6 +35,7 @@ body {
     no repeat(para a imagem não repetir)
     top center(para a imagem começar no topo e ficar centralizada)
     cover(cobre todo o espaço visível) */
+  height: 100vh;
 }
 
 body * {
@@ -175,4 +176,14 @@ footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --br-url: url(.assets/bg-desktop-light.jpg);
+  }
 }
