@@ -45,7 +45,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   /* largura da caixa DIV */
   margin: 56px auto 0px;
   /* centralizou a caixa */
